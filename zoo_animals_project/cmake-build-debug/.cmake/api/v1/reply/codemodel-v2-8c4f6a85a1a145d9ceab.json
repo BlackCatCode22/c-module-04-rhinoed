@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.30"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "zoo_animals_project",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "zoo_animals_project::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zoo_animals_project-Debug-0a8f1d3d9d5de15c4bbc.json",
+					"name" : "zoo_animals_project",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/markedmunds/Library/CloudStorage/OneDrive-StateCenterCommunityCollegeDistrct/Spring 25/CIT_66/mod_4/c-module-04-rhinoed/zoo_animals_project/cmake-build-debug",
+		"source" : "/Users/markedmunds/Library/CloudStorage/OneDrive-StateCenterCommunityCollegeDistrct/Spring 25/CIT_66/mod_4/c-module-04-rhinoed/zoo_animals_project"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
