@@ -12,11 +12,13 @@ using namespace std;
 namespace animal {
 
 class Bear : public Animal{
-    // Bear names
+    // Inheriting constructor from Animal
     static std::string names[10];
 public:
     // Constructor
-    Bear(const std::string &name, int age);
+    Bear(const std::string &name, int age, int weight, const std::string &species, const std::string &origin,
+         const std::string &birthSeason, const std::string &color);
+
     // Method
     void hibernate();
     static std::string generateName();

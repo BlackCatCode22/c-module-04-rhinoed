@@ -41,6 +41,8 @@ std::vector<std::vector<std::string>> parseFile(std::string filename) {
 std::string splitString(std::string str, char delimiter, int index) {
     std::vector<std::string> tokens;
     std::string token;
+    // strip the leading and trailing whitespace off str
+    str.erase(0, str.find_first_not_of(' '));
     std::istringstream tokenStream(str);
     while (std::getline(tokenStream, token, delimiter)) {
         tokens.push_back(token);

@@ -17,7 +17,9 @@ class Hyena : public Animal {
     static std::string names[11];
 public:
     // Constructor
-    Hyena(const std::string &name, int age);
+    Hyena(const std::string &name, int age, int weight, const std::string &species, const std::string &origin,
+          const std::string &birthSeason, const std::string &color);
+
     // Method
     void laugh();
 

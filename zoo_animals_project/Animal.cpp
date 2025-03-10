@@ -8,8 +8,11 @@
 using namespace std;
 namespace animal {
     // Constructor
-    Animal::Animal(const std::string &name, int age, const std::string &species)
-        : name(name), age(age), species(species) {}
+
+
+    Animal::Animal(const string &name, int age, int weight, const string &species, const string &origin,
+        const string &birthSeason, const string &color) : name(name), age(age), weight(weight), species(species), origin(origin), birthSeason(birthSeason), color(color) {
+    }
 
     // Getters
     int Animal::getAge() const {
@@ -39,7 +42,7 @@ namespace animal {
 
     // Display Method
     void Animal::displayInfo() const {
-        std::cout << "\nName: " << name << "\nAge: " << age << std::endl;
+        std::cout << "\nName: " << name << "\nAge: " << age  << "\nWeight: " << weight  << "\nOrigin: " << origin << "\nBirth Season: " << birthSeason << "\nColor: " << color <<"\n";
     }
 
 } // animal

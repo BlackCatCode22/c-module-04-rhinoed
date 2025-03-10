@@ -13,10 +13,12 @@ class Lion : public Animal{
     static std::string names[12];
 public:
     // Constructor
-    Lion(const std::string &name, int age);
+    Lion(const std::string &name, int age, int weight, const std::string &species, const std::string &origin,
+         const std::string &birthSeason, const std::string &color);
+
     // Method
     void roar();
-    std::string generateName();
+    static std::string generateName();
 
 };
 

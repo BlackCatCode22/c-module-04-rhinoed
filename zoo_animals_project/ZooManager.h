@@ -8,7 +8,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include "Animal.h"
+#include <map>
 #include "Hyena.h"
 #include "Lion.h"
 #include "Tiger.h"
@@ -44,6 +44,8 @@ namespace zooManager {
 
         // Method to generate a report of all animals in the zoo
         void generateReport();
+        // Method to count the number of animals in the zoo
+        std::map<std::string, int> countAnimals();
         // Method to process animals
         template<class T>
         void processAnimals(const T &animal) {

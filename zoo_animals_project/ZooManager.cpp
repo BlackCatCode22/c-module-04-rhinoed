@@ -18,20 +18,22 @@ namespace zooManager {
 
     void ZooManager::displayAnimals() {
         // Display all animals in the zoo
+        std::map<std::string, int> animalCount = countAnimals();
+        std::cout << "\nHyena Enclosure ("<< animalCount["Hyena"] << "):" << "\n";
         for (const auto &hyena : hyenaEnclosure) {
-            std::cout << "Hyena Enclosure: \n";
             hyena.displayInfo();
         }
+        std::cout << "\nLion Enclosure ("<< animalCount["Lion"] << "):" << "\n";
         for (const auto &lion : lionEnclosure) {
-            std::cout << "Lion Enclosure: \n";
+
             lion.displayInfo();
         }
+        std::cout << "\nTiger Enclosure ("<< animalCount["Tiger"] << "):" << "\n";
         for (const auto &tiger : tigerEnclosure) {
-            std::cout << "Tiger Enclosure: \n";
             tiger.displayInfo();
         }
+        std::cout << "\nBear Enclosure ("<< animalCount["Bear"] << "):" << "\n";
         for (const auto &bear : bearEnclosure) {
-            std::cout << "Bear Enclosure: \n";
             bear.displayInfo();
         }
     }
@@ -45,5 +47,14 @@ namespace zooManager {
     void ZooManager::generateReport() {
         // Open a file for writing
 
+    }
+
+    std::map<std::string, int> ZooManager::countAnimals() {
+        std::map<std::string,int> animalCount;
+        animalCount["Hyena"] = static_cast<int>(hyenaEnclosure.size());
+        animalCount["Lion"] = static_cast<int>(lionEnclosure.size());
+        animalCount["Tiger"] = static_cast<int>(tigerEnclosure.size());
+        animalCount["Bear"] = static_cast<int>(bearEnclosure.size());
+        return animalCount;
     }
 }// zooManager

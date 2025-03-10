@@ -8,10 +8,10 @@
 namespace animal {
 
     // Tiger names
-    std::string Tiger::names[11] = {"Tony", "Tigger", "Amber", "Cosimia", "Cuddles", "Dave", "Jiba", "Rajah", "Rayas", "Ryker"};
+    std::string Tiger::names[10] = {"Tony", "Tigger", "Amber", "Cosimia", "Cuddles", "Dave", "Jiba", "Rajah", "Rayas", "Ryker"};
 
     // Constructor
-    Tiger::Tiger(const std::string &name, int age) : Animal(name, age, "Tiger") {}
+    Tiger::Tiger(const std::string &name, int age, int weight, const std::string &species, const std::string &origin, const std::string &birthSeason, const std::string &color) : Animal(name, age, weight, "Tiger", origin, birthSeason, color) {}
 
     void Tiger::countStripes() {
         int stripes;
@@ -22,7 +22,7 @@ namespace animal {
 
     std::string Tiger::generateName() {
         // Pick a random name from the array
-        int randomIndex = rand() % 11;
+        int randomIndex = rand() % 10;
         std::string randomName = names[randomIndex];
         return randomName;
     }

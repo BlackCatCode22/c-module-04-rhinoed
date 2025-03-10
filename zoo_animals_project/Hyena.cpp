@@ -8,7 +8,8 @@
 namespace animal {
     // Hyena Names
     std::string Hyena::names[11] ={"Shenzi", "Banzai", "Ed", "Zig", "Bud", "Lou", "Kamari", "Wema", "Nne", "Madoa", "Prince Nevarah"};
-    Hyena::Hyena(const std::string &name, int age) : Animal(name, age, "Hyena") {}
+
+    Hyena::Hyena(const std::string &name, int age, int weight, const std::string &species, const std::string &origin, const std::string &birthSeason, const std::string &color) : Animal(name, age, weight, "Hyena", origin, birthSeason, color) {}
     void Hyena::laugh() {
         std::cout << name << ", the hyena says Hahaha" << std::endl;
     }

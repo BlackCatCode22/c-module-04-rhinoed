@@ -15,10 +15,15 @@ protected:
     // Class properties
     string name;
     int age;
+    int weight;
     string species;
+    string origin;
+    string birthSeason;
+    string color;
+
 public:
     // Class constructor
-    Animal(const string &name, int age, const string &species);
+    Animal(const string &name, int age, int weight,const string &species, const string &origin, const string &birthSeason, const string &color);
     // Class destructor
     virtual ~Animal() = default;
     // getters and setters
