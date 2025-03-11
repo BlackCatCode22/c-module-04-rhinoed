@@ -23,7 +23,7 @@ protected:
 
 public:
     // Class constructor
-    Animal(const string &name, int age, int weight,const string &species, const string &origin, const string &birthSeason, const string &color);
+    Animal(const string &name, int age, int weight,const string &species, const string &origin = "Unknown", const string &birthSeason = "Unknown", const string &color = "Unknown");;
     // Class destructor
     virtual ~Animal() = default;
     // getters and setters
@@ -33,8 +33,10 @@ public:
     void setSpecies(const string& species);
     string getName() const;
     void setName(const string& name);
+    string getOrigin() const;
+    void setOrigin(const string& origin);
     // Class methods
-    virtual void displayInfo() const;
+    void displayInfo() const;
 
 };
 

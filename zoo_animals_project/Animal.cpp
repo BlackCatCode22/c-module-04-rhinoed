@@ -10,8 +10,20 @@ namespace animal {
     // Constructor
 
 
-    Animal::Animal(const string &name, int age, int weight, const string &species, const string &origin,
-        const string &birthSeason, const string &color) : name(name), age(age), weight(weight), species(species), origin(origin), birthSeason(birthSeason), color(color) {
+    Animal::Animal(
+        const string &name,
+        int age, int weight,
+        const string &species,
+        const string &origin,
+        const string &birthSeason,
+        const string &color
+        )
+        : name(name),
+        age(age), weight(weight),
+        species(species),
+        origin(origin),
+        birthSeason(birthSeason),
+        color(color) {
     }
 
     // Getters
@@ -27,6 +39,10 @@ namespace animal {
         return name;
     }
 
+    string Animal::getOrigin() const {
+        return origin;
+    }
+
     // Setters
     void Animal::setAge(int age) {
         this->age = age;
@@ -38,6 +54,10 @@ namespace animal {
 
     void Animal::setName(const std::string &name) {
         this->name = name;
+    }
+
+    void Animal::setOrigin(const string &origin) {
+        this->origin = origin;
     }
 
     // Display Method

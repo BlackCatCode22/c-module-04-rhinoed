@@ -4,8 +4,10 @@
 
 #include "ZooManager.h"
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <ostream>
+
 
 namespace zooManager {
     ZooManager::ZooManager() {};
@@ -46,6 +48,28 @@ namespace zooManager {
 
     void ZooManager::generateReport() {
         // Open a file for writing
+        std::string filename = "../zooReport.txt";
+        std::ofstream file(filename);
+        // Write the report to the file
+        file << "Zoo Report\n";
+        file << "Hyena Enclosure (" << hyenaEnclosure.size() << "):\n";
+        for (const auto &hyena : hyenaEnclosure) {
+            file << hyena.getName() << ", " << hyena.getAge() << "\n";
+        }
+        file << "Lion Enclosure (" << lionEnclosure.size() << "):\n";
+        for (const auto &lion : lionEnclosure) {
+            file << lion.getName() << ", " << lion.getAge() << "\n";
+        }
+        file << "Tiger Enclosure (" << tigerEnclosure.size() << "):\n";
+        for (const auto &tiger : tigerEnclosure) {
+            file << tiger.getName() << ", " << tiger.getAge() << "\n";
+        }
+        file << "Bear Enclosure (" << bearEnclosure.size() << "):\n";
+        for (const auto &bear : bearEnclosure) {
+            file << bear.getName() << ", " << bear.getAge() << "\n";
+        }
+        // Close the file
+        file.close();
 
     }
 

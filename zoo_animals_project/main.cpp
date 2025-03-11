@@ -23,7 +23,7 @@ int main() {
         string origin = splitString(data[i][5], ' ', 0);
         string color = data[i][2];
         color.erase(0, color.find_first_not_of(' '));
-
+        //cout << data[i][4] << "\n";
         if (species == "hyena") {
             string hyenaName = Hyena::generateName();
             Hyena hyena(hyenaName, stoi(age), stoi(weight), species, origin, birthSeason, color);
@@ -44,9 +44,11 @@ int main() {
             cerr << "Unknown species: " << species << endl;
             return 1;
         }
+
     }
     // Display all animals in the zoo
     zooManager.displayAnimals();
+    zooManager.generateReport();
 
     return 0;
 }

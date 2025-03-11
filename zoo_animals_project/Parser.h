@@ -22,8 +22,11 @@ std::vector<std::vector<std::string>> parseFile(std::string filename) {
     // Open the file
     std::ifstream file(filename);
     // Read each line of the file
-    std::string line;
+    std::string line = "";
     while (std::getline(file, line)) {
+        // Remove any carriage return characters
+        line.erase(std::remove(line.begin(), line.end(), '\r'), line.end());
+
         std::vector<std::string> row;
         std::string cell;
         std::istringstream lineStream(line);
@@ -32,6 +35,8 @@ std::vector<std::vector<std::string>> parseFile(std::string filename) {
         }
         data.push_back(row);
     }
+
+
     // Close the file
     file.close();
     // Return the 2d vector of strings
